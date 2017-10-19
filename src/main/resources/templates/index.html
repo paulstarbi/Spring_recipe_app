@@ -3,10 +3,20 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>My Recopies</title>
+    <title>My Recipes</title>
 </head>
 <body>
     <h1>My Recipe11 123!</h1>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+    </tr>
+    <tr th:each="recipe : ${recipies}">
+        <td th:text="${recipe.id}"></td>
+        <td th:text="${recipe.description}"></td>
+    </tr>
 
+</table>
 </body>
 </html>
