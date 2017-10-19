@@ -21,11 +21,10 @@ public class Ingredient {
     public Ingredient() {
     }
 
-    public Ingredient(String ripe_avocados, BigDecimal bigDecimal, UnitOfMeasure eachUom, Recipe guacRecipe) {
-        description=ripe_avocados;
-        amount = bigDecimal;
-        unitOfMeasure = eachUom;
-        recipe = guacRecipe;
+    public Ingredient(String description, BigDecimal amount, UnitOfMeasure unitOfMeasure) {
+        this.description = description;
+        this.amount = amount;
+        this.unitOfMeasure = unitOfMeasure;
     }
 
     public UnitOfMeasure getUnitOfMeasure() {
