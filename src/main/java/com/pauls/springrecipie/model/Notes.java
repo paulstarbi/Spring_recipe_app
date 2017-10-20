@@ -1,7 +1,12 @@
 package com.pauls.springrecipie.model;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
 import javax.persistence.*;
 
+@Data
+@EqualsAndHashCode(exclude = {"recipe"})
 @Entity
 public class Notes {
 
@@ -15,27 +20,4 @@ public class Notes {
     @Lob
     private String reciepieNotes;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Recipe getRecipe() {
-        return recipe;
-    }
-
-    public void setRecipe(Recipe recipe) {
-        this.recipe = recipe;
-    }
-
-    public String getReciepieNotes() {
-        return reciepieNotes;
-    }
-
-    public void setReciepieNotes(String reciepieNotes) {
-        this.reciepieNotes = reciepieNotes;
-    }
 }
